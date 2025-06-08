@@ -5,7 +5,9 @@
 /frontend/.env.local
 
 
+
 #Other
 .idea
 .DS_Store
 *.iml
+node_modules
