@@ -6,7 +6,7 @@ import banner4 from "../../assets/images/banner1.webp";
 import banner5 from "../../assets/images/banner2.webp";
 import "./home.css";
 import "animate.css";
-import OurProducts from "../../components/Home/OurProducts/ourproducts";
+import OurProducts from "../../components/Home/OurProducts/ourProducts";
 function Home() {
   return (
     <div>
@@ -15,8 +15,8 @@ function Home() {
         <Carousel
           dots={true}
           dotPosition="bottom"
-          // autoplay
-          // autoplaySpeed={5000}
+          autoplay
+          autoplaySpeed={5000}
           className="custom-carousel"
         >
           <div className="carousel-item">
