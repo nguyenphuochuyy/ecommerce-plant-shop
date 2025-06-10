@@ -1,0 +1,40 @@
+import '../../../assets/styles/base.css'
+import "./header.css"
+import logo from '../../../assets/images/logo.webp'
+import { UserOutlined, HeartOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { Button } from 'antd';
+function Header() {
+  return (
+    <>
+      <div className="container">
+        <div className="header">
+          <div className="logo">
+            {/* <a
+              style={{
+                textDecoration : 'none',
+                color: 'black',
+                fontSize: '15px',
+                fontWeight :'600',
+              }}
+            >KHANH TRAN</a> */}
+            <img src={logo} alt="" />
+          </div>
+          <div className="menu">
+            <ul className="menu-list">
+              <li><a href="/">TRANG CHỦ</a></li>
+              <li><a href="/products">SẢN PHẨM</a></li>
+              <li><a href="/about">GIỚI THIỆU</a></li>
+              <li><a href="/contact">LIÊN HỆ</a></li>
+            </ul>
+          </div>
+          <div className="cart">
+            <Button type="text" icon={<UserOutlined />} style={{ marginRight: '15px' , fontSize : '24px' }} />
+            <Button type="text" icon={<HeartOutlined />} style={{ marginRight: '15px' , fontSize : '24px'}} />
+            <Button type="text" icon={<ShoppingCartOutlined />} badge={{ count: 2 }} style={{ fontSize : '24px'}} />
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+export default Header;
