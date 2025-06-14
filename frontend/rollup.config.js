@@ -3,6 +3,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
+import url from '@rollup/plugin-url';
 import { replace } from 'react-router-dom';
 
 export default {
@@ -13,7 +14,10 @@ export default {
     sourcemap: true, // Tạo sourcemap để debug
   },
   plugins: [
-  
+    url({
+      include: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg'], 
+      limit: 0, 
+    }),
     replace({
       values: {
         '"use client";': '', // Remove "use client" directive
@@ -33,7 +37,8 @@ export default {
       extract: true, // Tách CSS ra file riêng
       minimize: true, // Nén CSS
     }),
-    terser(), // Nén JavaScript
+    terser(), 
+    
     
   ],
   external: ['react', 'react-dom'], // Không bundle React/ReactDOM
