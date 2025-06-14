@@ -4,8 +4,12 @@ import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import url from '@rollup/plugin-url';
+import alias from '@rollup/plugin-alias';
 import { replace } from 'react-router-dom';
-
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 export default {
   input: 'src/main.jsx', // Điểm vào của ứng dụng (điều chỉnh nếu cần)
   output: {
@@ -15,7 +19,7 @@ export default {
   },
   plugins: [
     url({
-      include: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg'], 
+      include: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.webp'],
       limit: 0, 
     }),
     replace({
@@ -39,6 +43,11 @@ export default {
       minimize: true, // Nén CSS
     }),
     terser(), 
+       alias({
+      entries: [
+        { find: '@', replacement: path.resolve(__dirname, 'src') },
+      ]
+    }),
     
     
   ],
