@@ -1,9 +1,9 @@
 import { Button, Carousel } from "antd";
-import banner1 from "../../assets/images/slider1.webp";
-import banner2 from "../../assets/images/slider2.webp";
-import banner3 from "../../assets/images/slider3.webp";
-import banner4 from "../../assets/images/banner1.webp";
-import banner5 from "../../assets/images/banner2.webp";
+import banner1 from '@/assets/images/slider1.webp'
+import banner2 from '@/assets/images/slider2.webp'
+import banner3 from '@/assets/images/slider3.webp'
+import banner4 from '@/assets/images/banner1.webp'
+import banner5 from '@/assets/images/banner2.webp'
 import "./home.css";
 import "animate.css";
 import OurProducts from "../../components/Home/OurProducts/ourProducts";

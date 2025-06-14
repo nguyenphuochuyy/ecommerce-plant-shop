@@ -1,22 +1,14 @@
 import '../../../assets/styles/base.css'
 import "./header.css"
-import logo from '../../../assets/images/logo.webp'
 import { UserOutlined, HeartOutlined, ShoppingCartOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
+import logo from '@/assets/images/logo.webp'
 function Header() {
   return (
     <>
       <div className="container">
         <div className="header">
           <div className="logo">
-            {/* <a
-              style={{
-                textDecoration : 'none',
-                color: 'black',
-                fontSize: '15px',
-                fontWeight :'600',
-              }}
-            >KHANH TRAN</a> */}
             <img src={logo} alt="" />
           </div>
           <div className="menu">

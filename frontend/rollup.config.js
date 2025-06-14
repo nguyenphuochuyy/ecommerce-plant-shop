@@ -20,7 +20,8 @@ export default {
     }),
     replace({
       values: {
-        '"use client";': '', // Remove "use client" directive
+        '"use client";': '', 
+        "'use client';": '', 
       },
       preventAssignment: true,
     }),
