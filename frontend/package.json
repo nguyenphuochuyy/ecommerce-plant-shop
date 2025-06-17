@@ -15,8 +15,7 @@
     "antd": "^5.25.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.6.2",
-    "vite" : "^6.3.5"
+    "react-router-dom": "^7.6.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.27.2",
