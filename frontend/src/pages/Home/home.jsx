@@ -1,9 +1,12 @@
 import { Button, Carousel } from "antd";
-import banner1 from '@/assets/images/slider1.webp'
-import banner2 from '@/assets/images/slider2.webp'
-import banner3 from '@/assets/images/slider3.webp'
-import banner4 from '@/assets/images/banner1.webp'
-import banner5 from '@/assets/images/banner2.webp'
+import banner1 from "@/assets/images/slider1.webp";
+import banner2 from "@/assets/images/slider2.webp";
+import banner3 from "@/assets/images/slider3.webp";
+import banner4 from "@/assets/images/banner1.webp";
+import banner5 from "@/assets/images/banner2.webp";
+import shipping1 from "@/assets/images/shipping1.webp";
+import shipping2 from "@/assets/images/shipping2.webp";
+import shipping3 from "@/assets/images/shipping3.webp";
 import "./home.css";
 import "animate.css";
 import OurProducts from "../../components/Home/OurProducts/ourProducts";
@@ -45,8 +48,33 @@ function Home() {
           </div>
         </Carousel>
       </div>
+
       {/* banner section */}
       <div className="container">
+        {/* Sub banner section */}
+        <div className="sub-banner-section">
+        <div className="sub-banner-item">
+          <img src={shipping1}></img>
+          <div className="sub-banner-item-content">
+            <h3>Miễn phí vận chuyển</h3>
+            <p>Miễn phí vận chuyển cho đơn hàng trên 500.000đ</p>
+          </div>
+        </div>
+        <div className="sub-banner-item">
+          <img src={shipping2}></img>
+          <div className="sub-banner-item-content">
+            <h3>Thanh toán an toàn</h3>
+            <p>Chúng tôi cam kết bảo mật thông tin thanh toán của khách hàng</p>
+          </div>
+        </div>
+        <div className="sub-banner-item">
+          <img src={shipping3}></img>
+          <div className="sub-banner-item-content">
+            <h3>Bảo mật thông tin</h3>
+            <p>Chúng tôi cam kết bảo mật thông tin khách hàng</p>
+          </div>
+        </div>
+        </div>
         <div className="banner-section">
           <div className="banner-item">
             <div className="banner-item-content">

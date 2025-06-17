@@ -11,36 +11,35 @@
   width: 100%;
   position: relative;
 }
-.carousel-item-content{
+.carousel-item-content {
   position: absolute;
   top: 30%;
-  left: 7%;
+  left: 15%;
   color: black;
   animation: bounceLeftIn 1s ease-in-out;
-  animation-delay: 0.5s;
-  animation-duration: 1s;
+  animation-duration: 2s;
 }
 @keyframes bounceLeftIn {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-200px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
   }
 }
-.carousel-item-content h2{
+.carousel-item-content h2 {
   font-size: 2.5rem;
   font-weight: 800;
   opacity: 0.8;
   margin-bottom: 20px;
 }
-.carousel-item-content p{
+.carousel-item-content p {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-.carousel-item-content button{
+.carousel-item-content button {
   margin-top: 20px;
   text-decoration: none;
   padding: 15px 30px;
@@ -54,22 +53,24 @@
   cursor: pointer;
   border-radius: 45px;
 }
-.carousel-item-content button:hover{
+.carousel-item-content button:hover {
   background-color: #5a7d04;
   transition: ease-in 0.5s;
 }
 .carousel-img {
   width: 100%;
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
-.banner-section{
- margin-top: -200px;
- display: flex;
+.banner-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
 .banner-section .banner-item {
   position: relative;
-  flex: 1;
+  display: flex;
+  align-items: center;
   margin: 0 10px;
 }
 .banner-section .banner-item .banner-item-content {
@@ -78,13 +79,8 @@
   left: 3%;
   color: rgb(0, 0, 0);
 }
-.banner-item img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  aspect-ratio: 3/4;
-}
-.banner-button{
+
+.banner-button {
   display: inline-block;
   margin-top: 20px;
   text-decoration: none;
@@ -92,19 +88,50 @@
   color: black;
   font-weight: 600;
   font-size: 1.2rem;
-
 }
-.banner-button::after{
-  content: '';
+.banner-button::after {
+  content: "";
   display: block;
   width: 90px;
   height: 2px;
   background: #79a206;
-  transition: width .3s;
+  transition: width 0.3s;
   margin-top: 5px;
 }
-.banner-button:hover{
+.banner-button:hover {
   text-decoration: none;
   color: #79a206;
 }
 
+/* Sub banner section */
+.sub-banner-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+  padding: 50px 0;
+}
+.sub-banner-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.sub-banner-item::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 50px;
+  background-color: #79a206;
+  margin: 0 20px;
+}
+.sub-banner-item-content {
+  margin-left: 10px;
+}
+.sub-banner-item-content p {
+  padding: 3px 0;
+}
+/* Our products tab */
+.our-products-tabs {
+  text-align: center;
+  margin-top: 25px;
+}
